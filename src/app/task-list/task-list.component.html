@@ -1,0 +1,8 @@
+<div>
+  Todo list
+  <li *ngFor="let task of tasks">
+    {{task}}
+    <button type="button" class="btn btn-danger" (click)="remove(task)">Remove</button>
+    <button type="button" class="btn btn-success" (click)="done(task)">Done</button>
+  </li>
+</div>
