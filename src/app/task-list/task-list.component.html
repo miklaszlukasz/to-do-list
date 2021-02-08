@@ -1,8 +1,14 @@
-<div>
-  Todo list
-  <li *ngFor="let task of tasks">
-    {{task}}
-    <button type="button" class="btn btn-danger" (click)="remove(task)">Remove</button>
-    <button type="button" class="btn btn-success" (click)="done(task)">Done</button>
-  </li>
-</div>
+<ng-container *ngIf="tasks.length > 0; else noTasks">
+  <div>
+    Todo list
+    <li *ngFor="let task of tasks">
+      {{task.name}} : {{task.created | date:'medium'}}
+      <button type="button" class="btn btn-danger" (click)="remove(task)">Remove</button>
+      <button type="button" class="btn btn-success" (click)="done(task)">Done</button>
+    </li>
+  </div>
+</ng-container>
+<ng-template #noTasks>
+  Free time
+</ng-template>
+

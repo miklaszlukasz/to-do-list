@@ -2,6 +2,6 @@
   Done tasks
   <p>Done tasks: {{doneTasks.length}}</p>
   <li *ngFor="let task of doneTasks">
-    {{task}}
+    {{task.name}} : {{task.done | date:'medium'}}
   </li>
 </div>

@@ -1,20 +1,13 @@
 <div>
   <div class="container">
-    <app-add-task (emitTask)="add($event)"></app-add-task>
+    <app-add-task></app-add-task>
   </div>
 
   <div class="container">
-    <ng-container *ngIf="tasks.length > 0; else noTasks">
-      <app-task-list [tasks]="tasks" (taskToDone)="done($event)" (taskToRemove)="remove($event)"></app-task-list>
-    </ng-container>
-    <ng-template #noTasks>
-      Free time
-    </ng-template>
+    <app-task-list></app-task-list>
 
-    <div class="container">
-      <app-done-task-list [doneTasks]="doneTasks"></app-done-task-list>
-    </div>
-
+    <app-done-task-list></app-done-task-list>
   </div>
+
 
 </div>
