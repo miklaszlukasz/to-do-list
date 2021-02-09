@@ -11,7 +11,7 @@ export class TaskListComponent {
   tasks = [];
 
   constructor(private tasksService: TasksService) {
-    this.tasksService.getTasksObs().subscribe(tasks => this.tasks = tasks);
+    this.tasksService.getTasksObs().subscribe(tasks => this.tasks = tasks.slice());
   }
 
 

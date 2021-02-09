@@ -12,7 +12,7 @@ export class DoneTaskListComponent {
   doneTasks: Array<Task> = [];
 
   constructor(private tasksService: TasksService) {
-    this.tasksService.getDoneTasksObs().subscribe(tasks => this.doneTasks = tasks);
+    this.tasksService.getDoneTasksObs().subscribe(tasks => this.doneTasks = tasks.slice());
   }
 
 }

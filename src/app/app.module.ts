@@ -7,13 +7,19 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { DoneTaskListComponent } from './done-task-list/done-task-list.component';
 import {TasksService} from './service/tasks/tasks.service';
+import { DateDirective } from './directives/date.directive';
+import { DisplayTaskPipe } from './pipe/display-task.pipe';
+import { SortTasksPipe } from './pipe/sort-tasks.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     TaskListComponent,
-    DoneTaskListComponent
+    DoneTaskListComponent,
+    DateDirective,
+    DisplayTaskPipe,
+    SortTasksPipe
   ],
   imports: [
     BrowserModule,

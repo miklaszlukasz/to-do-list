@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 import {TasksService} from '../service/tasks/tasks.service';
 import {Task} from '../model/Task';
 
@@ -10,7 +10,9 @@ import {Task} from '../model/Task';
 export class AddTaskComponent {
 
   newTaskName: string;
-  constructor(private tasksService: TasksService) { }
+
+  constructor(private tasksService: TasksService) {
+  }
 
   add(): void {
     if (this.newTaskName === ``) {

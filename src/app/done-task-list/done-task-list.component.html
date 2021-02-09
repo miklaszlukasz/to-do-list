@@ -1,7 +1,7 @@
 <div>
   Done tasks
   <p>Done tasks: {{doneTasks.length}}</p>
-  <li *ngFor="let task of doneTasks">
-    {{task.name}} : {{task.done | date:'medium'}}
+  <li appDate [date]="task.created" *ngFor="let task of doneTasks | sortTasks">
+    {{task.name | displayTask}} : {{task.done | date:'medium'}}
   </li>
 </div>
